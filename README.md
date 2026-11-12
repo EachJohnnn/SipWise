@@ -2,32 +2,36 @@
 
 双人课程项目，使用 Vue 3、FastAPI 和 SQLite。本启动版本能通过网页搜索两条本地鸡尾酒样例，并显示配方详情与背景故事。开发阶段、接口和后续分工见 [开发手册](docs/development-plan.md)与 [API 接口文档](docs/api-contract.md)。
 
-## 1. 第一次把骨架放进 GitHub
+## 1. 克隆仓库
 
-昊翰先执行。将 `SipWise-starter.zip` 下载到本机，下面以 macOS 的 Downloads 路径为例。选择一个还没有 `SipWise/` 目录的父目录执行：
+骨架已于 2026-11-12 提交到 `main`（`chore: bootstrap SipWise local development`），仓库不再是空的，直接克隆即可：
 
 ```bash
-git clone https://github.com/EachJohnnn/SipWise.git
-unzip "$HOME/Downloads/SipWise-starter.zip" -d SipWise
+git clone git@github.com:EachJohnnn/SipWise.git
 cd SipWise
-git switch -c main
 ```
 
-如果本地已经有克隆目录，将压缩包解压到那个目录。已有 Git 提交时，先同步已有分支，然后通过 PR 放入骨架。确认根目录能看到 `README.md`、`backend/`、`frontend/` 和 `docs/`。运行下面第 2、3 节验收，空仓库的首次提交随后执行：
+**必须使用上面的 SSH 地址。** 国内网络下 `github.com:443` 被阻断，HTTPS 克隆会报 `Failed to connect to github.com port 443`。首次使用前把本机公钥加到 GitHub（Settings → SSH and GPG keys），验证方式：
 
 ```bash
-git status --short
-git add README.md .gitignore backend frontend docs
-git diff --cached --stat
-git commit -m "chore: bootstrap SipWise local development"
-git push -u origin main
+ssh -T git@github.com   # 应返回 Hi <用户名>!
 ```
 
-昊翰在 GitHub 将 Yichi 添加为协作者。首次推送后，Yichi 克隆同一个仓库，执行下面的启动步骤。
+两人均已是协作者，权限对等。克隆后确认根目录能看到 `README.md`、`backend/`、`frontend/` 和 `docs/`，然后执行第 2、3 节的启动与验收。
+
+之后所有改动都走分支 + PR，不再直接提交到 `main`：
+
+```bash
+git switch main
+git pull --ff-only origin main
+git switch -c feature/<本次功能>
+```
 
 ## 2. 本机启动
 
 准备 Git、Python 3.12 和 Node.js 22.x（至少 22.12）或 24.x。项目在本机运行，SQLite 由 Python 内置模块访问，数据库文件由 FastAPI 启动时创建。这个阶段只需启动两个本地进程。Docker、云部署、LLM 和第三方 API 密钥留到相应功能阶段。
+
+macOS 自带的 `python3` 可能仍是 3.9，创建虚拟环境时指定版本，避免依赖装不上：`python3.12 -m venv .venv`。国内网络安装后端依赖可加清华源 `-i https://pypi.tuna.tsinghua.edu.cn/simple`。
 
 **终端 A · FastAPI**
 
