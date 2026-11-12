@@ -1,0 +1,39 @@
+[
+  {
+    "id": "11003",
+    "name": "Negroni",
+    "image_url": null,
+    "alcohol_type": "alcoholic",
+    "category": "Ordinary Drink",
+    "glass": "Old-fashioned glass",
+    "ingredients": [
+      {"name": "Gin", "measure": "1 oz"},
+      {"name": "Campari", "measure": "1 oz"},
+      {"name": "Sweet Vermouth", "measure": "1 oz"}
+    ],
+    "instructions": "Stir the ingredients with ice, then garnish and serve.",
+    "recipe_source_url": "https://www.thecocktaildb.com/drink/11003-negroni-cocktail",
+    "story": {
+      "summary": "一种流传较广的说法将这款鸡尾酒的起源追溯到佛罗伦萨，与 Americano 的改配有关。",
+      "source_title": "Liquor.com · Negroni",
+      "source_url": "https://www.liquor.com/recipes/negroni/"
+    }
+  },
+  {
+    "id": "11007",
+    "name": "Margarita",
+    "image_url": null,
+    "alcohol_type": "alcoholic",
+    "category": "Ordinary Drink",
+    "glass": "Cocktail glass",
+    "ingredients": [
+      {"name": "Tequila", "measure": "1 1/2 oz"},
+      {"name": "Triple sec", "measure": "1/2 oz"},
+      {"name": "Lime juice", "measure": "1 oz"},
+      {"name": "Salt", "measure": null}
+    ],
+    "instructions": "Salt the glass rim with lime, then shake the liquid ingredients with ice and pour.",
+    "recipe_source_url": "https://www.thecocktaildb.com/drink/11007",
+    "story": null
+  }
+]
