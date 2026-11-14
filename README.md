@@ -4,7 +4,7 @@
 
 ## 1. 第一次把骨架放进 GitHub
 
-昊翰先执行。将 `SipWise-starter.zip` 下载到本机，下面以 macOS 的 Downloads 路径为例。选择一个还没有 `SipWise/` 目录的父目录执行：
+将 `SipWise-starter.zip` 下载到本机，下面以 macOS 的 Downloads 路径为例。选择一个还没有 `SipWise/` 目录的父目录执行：
 
 ```bash
 git clone https://github.com/EachJohnnn/SipWise.git
