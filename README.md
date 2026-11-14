@@ -23,8 +23,6 @@ git commit -m "chore: bootstrap SipWise local development"
 git push -u origin main
 ```
 
-昊翰在 GitHub 将 Yichi 添加为协作者。首次推送后，Yichi 克隆同一个仓库，执行下面的启动步骤。
-
 ## 2. 本机启动
 
 准备 Git、Python 3.12 和 Node.js 22.x（至少 22.12）或 24.x。项目在本机运行，SQLite 由 Python 内置模块访问，数据库文件由 FastAPI 启动时创建。这个阶段只需启动两个本地进程。Docker、云部署、LLM 和第三方 API 密钥留到相应功能阶段。
